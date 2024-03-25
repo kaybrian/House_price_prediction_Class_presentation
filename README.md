@@ -30,3 +30,34 @@ Price is the cost associated with purchasing or renting the housing unit. It is 
 
 
 ## usage 
+### clone the project 
+
+```
+git clone https://github.com/kaybrian/House_price_prediction_Class_presentation.git
+```
+
+### create a virtual env 
+
+```
+python -m venv env
+```
+
+### activate the env 
+
+```
+source env/bin/activate
+```
+
+### install the virtual env requirements dependencies
+
+```
+pip install -r requirements.txt
+```
+
+### run the project in the .ipynb 
+
+the project has been installed canbe run in the file with a vs code extension of jupyter notebook 
+
+
+# Author 
+- Kayongo Johnson Brian

@@ -47,5 +47,3 @@ async def make_prediction(house_request: HouseRequest):
         return {"predicted Price ": new_value[0][0]}
     except:
         raise HTTPException(status_code=500, detail="Something went wrong.")
-
-

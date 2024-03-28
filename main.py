@@ -3,6 +3,7 @@ import uvicorn
 from typing import Annotated
 from fastapi import FastAPI, Depends, HTTPException, status, Path
 from pydantic import BaseModel, Field
+from fastapi.middleware.cors import CORSMiddleware
 
 
 import pickle as pk
@@ -16,6 +17,16 @@ with open("./model/lin_model.pkl", "rb") as file:
 # create app instance 
 app = FastAPI()
 
+
+
+# Configure CORS
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # Allow requests from any origin
+    allow_credentials=True,
+    allow_methods=["GET", "POST"],  # Allow GET and POST requests
+    allow_headers=["*"],  # Allow any headers
+)
 
 # create a pedantic class for the request
 class HouseRequest(BaseModel):

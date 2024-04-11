@@ -55,6 +55,6 @@ async def make_prediction(house_request: HouseRequest):
     try:
         single_row = [[house_request.bedroom_count, house_request.net_sqm, house_request.center_distance, house_request.metro_distance, house_request.floor, house_request.age]]
         new_value = lin_model.predict(single_row)
-        return {"predicted Price ": new_value[0][0]}
+        return new_value[0][0]
     except:
         raise HTTPException(status_code=500, detail="Something went wrong.")
